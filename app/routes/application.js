@@ -24,10 +24,15 @@ export default Ember.Route.extend({
         Ember.run(function(){
           var words = new Trie();
           var lines = data.split("\n");
-          for(var i = 0; i < lines.length; i++){
-            words.put(lines[i]);
+          function iteration() {
+            words.puts(lines.splice(0,10000));
+            if(lines.length > 0){
+              setTimeout(iteration, 1);
+            } else {
+              controller.set("words", words);
+            }
           }
-          controller.set("words", words);
+          iteration()
         });
       });    
     }

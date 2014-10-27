@@ -35,6 +35,13 @@ var Trie = (function() {
       }
     },
 
+    puts: function(words) {
+      var parent = this;
+      words.forEach(function(word){
+        parent.put(word);
+      });
+    },
+
     get: function(word) {
       word = word.toUpperCase();
       if(word.length === 0) {

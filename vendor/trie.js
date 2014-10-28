@@ -1,8 +1,4 @@
-String.prototype.letterHash = function () {
-  return this.toUpperCase().split('').sort().join('');
-};
-
-String.prototype.letters = function () {
+String.prototype.letterCounts = function () {
   var characters = this.toUpperCase().split('');
   var hash = {};
   for (var i = 0; i < characters.length; i++) {
@@ -13,7 +9,6 @@ String.prototype.letters = function () {
 
   return hash;
 };
-
 
 var Trie = (function() {
 
@@ -52,11 +47,11 @@ var Trie = (function() {
     },
 
     anagrams: function(word) {
-      return this.anagramsRecursive(word.letters(), "", false);
+      return this.anagramsRecursive(word.letterCounts(), "", false);
     },
 
     subwords: function(word) {
-      return this.anagramsRecursive(word.letters(), "", true);
+      return this.anagramsRecursive(word.letterCounts(), "", true);
     },
 
     anagramsRecursive: function(letters, prefix, matchSubwords) {

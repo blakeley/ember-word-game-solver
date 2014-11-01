@@ -1,15 +1,3 @@
-String.prototype.letterCounts = function () {
-  var characters = this.toUpperCase().split('');
-  var hash = {};
-  for (var i = 0; i < characters.length; i++) {
-    var character = characters[i];
-    hash[character] = hash[character] || 0;
-    hash[character] += 1;
-  }
-
-  return hash;
-};
-
 var Trie = (function() {
 
   function Trie(){
@@ -50,7 +38,7 @@ var Trie = (function() {
       return this.anagramsRecursive(word.letterCounts(), "", false);
     },
 
-    subwords: function(word) {
+    subanagrams: function(word) {
       return this.anagramsRecursive(word.letterCounts(), "", true);
     },
 

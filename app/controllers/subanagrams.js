@@ -4,8 +4,8 @@ export default Ember.Controller.extend({
   needs: ["application"],
   words: Ember.computed.alias('controllers.application.words'),
 
-  anagrams: function() {
-    return this.get('words').anagrams(this.get('letters'));
+  subanagrams: function() {
+    return this.get('words').subanagrams(this.get('letters'));
   }.property('words', 'letters'),
 
 });

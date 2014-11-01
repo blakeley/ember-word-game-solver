@@ -1,3 +1,4 @@
+/*global Ember */
 import {
   moduleFor,
   test
@@ -14,10 +15,18 @@ module('Integration - Anagrams', {
   }
 });
 
-test('test word trie', function() {
-  visit('/anagrams');
-  fillIn('input#letters', 'aemt');
+test('/anagrams should display anagrams of given letters', function() {
+  visit('/anagrams').
+  fillIn('#letters', 'aemt');
   andThen(function(){
     equal(find('li').length, 2);
+  });
+});
+
+test('/subanagrams should display subanagrams of given letters', function() {
+  visit('/subanagrams').
+  fillIn('#letters', 'aemt');
+  andThen(function(){
+    equal(find('li').length, 3);
   });
 });

@@ -1,0 +1,21 @@
+input#letters {
+  width: 100%;
+  border: none;
+  border-bottom: 1px dotted;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+}
+
+ul.words {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+}
+
+ul.words li {
+  display: inline-block;
+  border: 1px solid;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}

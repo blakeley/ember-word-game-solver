@@ -1,3 +1,28 @@
 html, body {
-  margin: 20px;
+  margin: 0;
+  padding: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input:focus{
+  outline: none;
+}
+
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body {height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif;}
+body > .ember-view {height: 100%; width: 100%;}

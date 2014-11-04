@@ -16,8 +16,10 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
-app.import('vendor/trie.js')
-app.import('vendor/dictionary.js')
-app.import('vendor/word_list.js')
+app.import('vendor/trie.js');
+app.import('vendor/dictionary.js');
+app.import('vendor/word_list.js');
+app.import('app/styles/nav.css');
+app.import('app/styles/anagrams.css');
 
 module.exports = app.toTree();

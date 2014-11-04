@@ -19,7 +19,7 @@ test('/anagrams should display anagrams of given letters', function() {
   visit('/anagrams').
   fillIn('#letters', 'aemt');
   andThen(function(){
-    equal(find('li').length, 2);
+    equal(find('li.word').length, 2);
   });
 });
 
@@ -27,6 +27,6 @@ test('/subanagrams should display subanagrams of given letters', function() {
   visit('/subanagrams').
   fillIn('#letters', 'aemt');
   andThen(function(){
-    equal(find('li').length, 3);
+    equal(find('li.word').length, 3);
   });
 });

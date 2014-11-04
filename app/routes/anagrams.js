@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 
   setupController: function(controller, model) {
     model = null;
-    controller.set('letters', 'mates');
+    controller.set('letters', '');
   }
 
 });

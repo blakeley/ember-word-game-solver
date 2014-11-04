@@ -1,11 +1,15 @@
-<h2 id='title'>Welcome to Ember.js</h2>
 
-{{link-to 'home' 'application'}}
+<nav class="menu">
+  <ul>
+    <li>{{link-to 'Home' 'application'}}</li>
+    <li>{{link-to 'Anagrams' 'anagrams'}}</li>
+    <li>{{link-to 'Subanagrams' 'subanagrams'}}</li>
+  </ul>
+</nav>
 
-{{link-to 'anagrams' 'anagrams'}}
 
-{{link-to 'subanagrams' 'subanagrams'}}
+<div class="wrapper">
+  {{outlet}}
+</div>
 
-{{wordCount}} words
 
-{{outlet}}
